@@ -1,0 +1,20 @@
+.photos__list{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.photo__item{
+    display: block;
+    width: 15%;
+}
+.form_wrap{
+    max-width: 50%;
+    margin: 0 auto;
+}
+h1{
+    text-align: center;
+}
+img{
+    width: 100%;
+}
