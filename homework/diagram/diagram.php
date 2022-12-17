@@ -1,7 +1,5 @@
 <?php
 
-header("Content-type: image/png");
-
 $students = [
     [
         "name" => "Joan",
@@ -59,6 +57,7 @@ if (isset($_GET['submit'])) {
         imagefilledarc($image, 50, 50, 100, 50, 45, 75, $gray, IMG_ARC_PIE);
         imagefilledarc($image, 50, 50, 100, 50, 75, 360, $red, IMG_ARC_PIE);
         // вывод изображения
+        header('Content-type: image/png');
         imagepng($image);
         imagedestroy($image);
     } else {
@@ -101,6 +100,8 @@ if (isset($_GET['submit'])) {
             imageline($im, $x1, $y2, $x2, $y2, $gray_lite);
             imageline($im, $x2, $y1, $x2, $y2, $gray_dark);
         }
+        // Посылаем информацию заголовку, можно заменить на JPEG или GIF 
+        header("Content-type: image/png");
         imagepng($im);
     }
 }
